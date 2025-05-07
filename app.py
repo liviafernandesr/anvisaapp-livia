@@ -15,9 +15,9 @@ st.set_page_config(
     page_icon="🛡️",
     layout="wide"
 )
-header_anvisa()
-    def header_anvisa(): # CABEÇALHO
-        st.markdown("""
+
+def header_anvisa(): # CABEÇALHO
+    st.markdown("""
         <style>
             /* Container principal fixo */
             .header-container {
@@ -79,6 +79,7 @@ header_anvisa()
             </div>
         </div>
         """, unsafe_allow_html=True)
+header_anvisa()
 
 # Função para verificar arquivos 
 def check_files():
