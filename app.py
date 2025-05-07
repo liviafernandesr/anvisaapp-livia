@@ -579,32 +579,42 @@ def main():
             # RODAPÉ
             st.markdown("""
             <style>
+            /* Evita conflito com abas */
+            .stApp [data-testid="stVerticalBlock"] {
+                position: relative;
+                padding-bottom: 50px !important; /* Espaço para o rodapé */
+            }
+            
             .footer {
                 position: fixed;
-                left: 0;
                 bottom: 0;
+                left: 0;
                 width: 100%;
-                background-color: #006341; /* Verde ANVISA */
+                background-color: #006341;
                 color: white;
                 text-align: center;
-                padding: 12px 0;
-                font-family: 'Arial', sans-serif;
-                border-top: 2px solid #e1f0e8; /* Borda clara */
-                z-index: 100;
+                padding: 8px 0;
+                font-size: 0.85rem;
+                z-index: 999;
+                border-top: 1px solid #e1f0e8;
             }
-            .footer a {
-                color: #f5f5f5 !important;
-                text-decoration: none;
-                transition: all 0.3s ease;
-            }
-            .footer a:hover {
-                color: #d4a017 !important; /* Dourado ANVISA ao passar mouse */
+            
+            .footer-content {
+                max-width: 800px;
+                margin: 0 auto;
+                display: flex;
+                justify-content: center;
+                gap: 15px;
+                flex-wrap: wrap;
             }
             </style>
+            
             <div class="footer">
-                Projeto desenvolvido por <strong>Lívia Fernandes da Rocha</strong><br>
-                <a href="mailto:livia.fernandes@academico.ufpb.br">livia.fernandes@academico.ufpb.br</a> | 
-                <a href="https://www.gov.br/anvisa" target="_blank">ANVISA</a> - 2025
+                <div class="footer-content">
+                    <span>Projeto por: <strong>Lívia Fernandes da Rocha</strong></span>
+                    <span>|</span>
+                    <a href="mailto:livia.fernandes@academico.ufpb.br" style="color: #d4a017 !important;">livia.fernandes@academico.ufpb.br</a>
+                </div>
             </div>
             """, unsafe_allow_html=True)
 
