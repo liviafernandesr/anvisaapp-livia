@@ -15,49 +15,70 @@ st.set_page_config(
     page_icon="🛡️",
     layout="wide"
 )
-
-def header_anvisa(): # Adiciona o cabeçalho com informações do governo
+header_anvisa()
+def header_anvisa(): # CABEÇALHO
     st.markdown("""
     <style>
+        /* Container principal fixo */
+        .header-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        
+        .gov-brasil {
+            background-color: #072b57;
+            padding: 8px 0;
+            font-size: 0.85rem;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
         .gov-header {
-            background-color: #006341; /* Verde ANVISA */
-            padding: 0.5rem 1rem;
+            background-color: #006341;
+            padding: 12px 20px;
             color: white;
             font-family: 'Arial', sans-serif;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-        }
-        .gov-logo {
             display: flex;
             align-items: center;
-            gap: 15px;
+            justify-content: space-between;
         }
+        
         .gov-title {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             font-weight: 700;
             margin: 0;
         }
-        .gov-subtitle {
-            font-size: 1rem;
-            margin: 0;
-            opacity: 0.9;
-        }
-        .gov-brasil {
-            background-color: #072b57; /* Azul governo */
-            padding: 0.3rem;
-            font-size: 0.9rem;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
+        
+        /* Ajuste para o conteúdo principal não ficar escondido */
+        .stApp {
+            padding-top: 100px !important;
         }
     </style>
 
-    <div class="gov-brasil">
-        <span>🌐 brasil.gov.br</span>
-        <span>🛡️ Ministério da Saúde</span>
-        <span>🇧🇷 Governo Federal</span>
+    <div class="header-container">
+        <div class="gov-brasil">
+            <span>🌐 brasil.gov.br</span>
+            <span>🛡️ Ministério da Saúde</span>
+            <span>🇧🇷 Governo Federal</span>
+        </div>
+        
+        <div class="gov-header">
+            <div class="gov-logo">
+                <img src="https://www.gov.br/@@govbr-theme/images/govbr-colorido-b.png" width="100">
+                <div>
+                    <h1 class="gov-title">ANVISA</h1>
+                    <p class="gov-subtitle">Sistema de Classificação de Produtos</p>
+                </div>
+            </div>
+        </div>
     </div>
     """, unsafe_allow_html=True)
-header_anvisa()
 
 # Função para verificar arquivos 
 def check_files():
