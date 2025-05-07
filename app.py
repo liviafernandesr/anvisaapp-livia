@@ -576,6 +576,37 @@ def main():
             - Email: ti@anvisa.gov.br
             - Telefone: (61) 3462-5400
             """)
+            # RODAPÉ
+            st.markdown("""
+            <style>
+            .footer {
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                background-color: #006341; /* Verde ANVISA */
+                color: white;
+                text-align: center;
+                padding: 12px 0;
+                font-family: 'Arial', sans-serif;
+                border-top: 2px solid #e1f0e8; /* Borda clara */
+                z-index: 100;
+            }
+            .footer a {
+                color: #f5f5f5 !important;
+                text-decoration: none;
+                transition: all 0.3s ease;
+            }
+            .footer a:hover {
+                color: #d4a017 !important; /* Dourado ANVISA ao passar mouse */
+            }
+            </style>
+            <div class="footer">
+                Projeto desenvolvido por <strong>Lívia Fernandes da Rocha</strong><br>
+                <a href="mailto:livia.fernandes@academico.ufpb.br">livia.fernandes@academico.ufpb.br</a> | 
+                <a href="https://www.gov.br/anvisa" target="_blank">ANVISA</a> - 2025
+            </div>
+            """, unsafe_allow_html=True)
 
 if __name__ == "__main__":
     main()
