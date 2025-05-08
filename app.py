@@ -400,7 +400,6 @@ def main():
                 - Incorporar variáveis adicionais, como histórico de fiscalização ou reclamações de consumidores, para enriquecimento do modelo.
                 - Explorar técnicas avançadas de ensemble, como Gradient Boosting, para potencializar o desempenho.
                 - Implementar o modelo em sistemas de monitoramento automatizado para auxiliar órgãos reguladores e empresas do setor.
-                - Considerar a implementação de um sistema de feedback contínuo, onde os usuários possam reportar erros ou inconsistências nas previsões, permitindo ajustes e melhorias no modelo ao longo do tempo.
                 """)
 
 
