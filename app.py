@@ -577,29 +577,34 @@ def main():
             - Telefone: (61) 3462-5400
             """)
             
-            # RODAPÉ
-            st.markdown("""
-            <style>
-            .footer-minimal {
-                position: fixed;
-                bottom: 0;
-                left: 0;
-                width: 100%;
-                background-color: rgba(0, 99, 65, 0.9); /* Verde ANVISA com transparência */
-                color: white;
-                text-align: center;
-                padding: 6px 0;
-                font-size: 0.75rem;
-                border-top: 1px solid #e1f0e8;
-                backdrop-filter: blur(2px); /* Efeito de vidro */
-            }
-            </style>
-            
-            <div class="footer-minimal">
-                © 2025 ANVISA - Desenvolvido por Lívia Fernandes • 
-                <a href="mailto:livia.fernandes@academico.ufpb.br" style="color: #d4a017; text-decoration: none;">livia.fernandes@academico.ufpb.br</a>
-            </div>
-            """, unsafe_allow_html=True)
+# RODAPE
+st.markdown("""
+<style>
+/* Ajuste para não conflitar com abas */
+.stApp {
+    padding-bottom: 40px !important;
+}
+.footer-minimal {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 99, 65, 0.95);
+    color: white;
+    text-align: center;
+    padding: 6px 0;
+    font-size: 0.75rem;
+    border-top: 1px solid #e1f0e8;
+    z-index: 999;
+}
+</style>
+""", unsafe_allow_html=True)
+st.markdown("""
+<div class="footer-minimal">
+    © 2025 ANVISA - Desenvolvido por Lívia Fernandes • 
+    <a href="mailto:livia.fernandes@academico.ufpb.br" style="color: #d4a017; text-decoration: none;">livia.fernandes@academico.ufpb.br</a>
+</div>
+""", unsafe_allow_html=True)
 
 if __name__ == "__main__":
     main()
