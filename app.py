@@ -576,45 +576,28 @@ def main():
             - Email: ti@anvisa.gov.br
             - Telefone: (61) 3462-5400
             """)
+            
             # RODAPÉ
             st.markdown("""
             <style>
-            /* Evita conflito com abas */
-            .stApp [data-testid="stVerticalBlock"] {
-                position: relative;
-                padding-bottom: 50px !important; /* Espaço para o rodapé */
-            }
-            
-            .footer {
+            .footer-minimal {
                 position: fixed;
                 bottom: 0;
                 left: 0;
                 width: 100%;
-                background-color: #006341;
+                background-color: rgba(0, 99, 65, 0.9); /* Verde ANVISA com transparência */
                 color: white;
                 text-align: center;
-                padding: 8px 0;
-                font-size: 0.85rem;
-                z-index: 999;
+                padding: 6px 0;
+                font-size: 0.75rem;
                 border-top: 1px solid #e1f0e8;
-            }
-            
-            .footer-content {
-                max-width: 800px;
-                margin: 0 auto;
-                display: flex;
-                justify-content: center;
-                gap: 15px;
-                flex-wrap: wrap;
+                backdrop-filter: blur(2px); /* Efeito de vidro */
             }
             </style>
             
-            <div class="footer">
-                <div class="footer-content">
-                    <span>Projeto por: <strong>Lívia Fernandes da Rocha</strong></span>
-                    <span>|</span>
-                    <a href="mailto:livia.fernandes@academico.ufpb.br" style="color: #d4a017 !important;">livia.fernandes@academico.ufpb.br</a>
-                </div>
+            <div class="footer-minimal">
+                © 2025 ANVISA - Desenvolvido por Lívia Fernandes • 
+                <a href="mailto:livia.fernandes@academico.ufpb.br" style="color: #d4a017; text-decoration: none;">livia.fernandes@academico.ufpb.br</a>
             </div>
             """, unsafe_allow_html=True)
 
